@@ -1,0 +1,106 @@
+@import "colors";
+
+.cart {
+    background-color: $pink;
+    width: 100%;
+    min-height: 100vh; /* Changed to min-height to ensure it stretches if content overflows */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    margin: 0 auto;
+  
+    > main {
+      width: 100%;
+      max-width: 900px;
+      background-color: white;
+      padding: 2rem;
+      margin: 0; /* Remove any margins */
+  
+      > article {
+        padding: 2rem;
+        >div {
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap */
+            justify-content: space-between;
+            margin: 1rem 0;
+        }
+        > a {
+            background-color: $red;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 2rem;
+            float: right;
+          }
+      }
+  
+      
+    }
+  }
+  
+  .cartItem {
+    background-color: rgb(246, 246, 246);
+    margin-bottom: 1rem; /* Added margin between each cart item */
+    width: 100%; 
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    > div {
+      display: flex;
+      align-items: center;
+    }
+  
+    > div h4 {
+      font-weight: 200;
+      letter-spacing: 2px;
+      margin-right: 1rem;
+    }
+  
+    > div img {
+      height: 50px;
+      margin-right: 1rem;
+    }
+  
+    > div input {
+      text-align: center;
+      width: 2rem;
+      height: 2rem;
+      padding: 0.5rem;
+      border: none;
+      margin: 0.25rem;
+      outline: none;
+      border-radius: 5px;
+      color: $red;
+  
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0%;
+      }
+    }
+  
+    > div button {
+      cursor: pointer;
+      border: none;
+      padding: 0.5rem;
+      background-color: $dark;
+      color: white;
+      border-radius: 5px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .cartItem {
+      width: 100%; /* Display one item per row on smaller screens */
+    }
+    .cart > main > article > a {
+        float: none;
+        display: block;
+        width: 100%;
+      }
+  }
+  
