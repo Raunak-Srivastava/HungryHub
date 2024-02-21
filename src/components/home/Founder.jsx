@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from "framer-motion";
+import me from "../../assets/profile.jpeg"
 
 const Founder = () => {
     const options={
@@ -9,7 +10,7 @@ const Founder = () => {
   return (
     <section className='founder'>
     <motion.div {...options}>
-        <img src="https://avatars.githubusercontent.com/Raunak-Srivastava" alt="Founder" height={200} width={200}/>
+        <img src={me} alt="Founder" height={200} width={200}/>
         <h3>Raunak Srivastava</h3>
         <p>
             Hey, I am Raunak Srivastava, the founder of HungryHub. I started this company with the vision of providing the best food delivery service in the world. I hope you enjoy our service.
